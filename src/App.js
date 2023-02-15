@@ -3,17 +3,15 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  const [energy, setEnergy] = React.useState(false);
-  const [velocity, setVelocity] = React.useState("slow");
+  const [energy, setEnergy] = React.useState(true);
+  const [velocity, setVelocity] = React.useState("fast");
 
   return (
     <div className="App">
       <header className="App-header">
         <img
           src={logo}
-          data-energy={energy}
-          data-velocity={velocity}
-          className="App-logo"
+          className={`App-logo energy-${energy} velocity-${velocity}`}
           alt="logo"
         />
         <p>
